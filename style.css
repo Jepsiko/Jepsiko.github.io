@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromBottom {
     0% {
         opacity: 0;
         transform: translateY(2em);
@@ -22,6 +22,8 @@ body {
 h1 {
     color: white;
     font-family: 'Roboto Mono', sans-serif;
+    font-size: 3rem;
+    padding-top: 2rem;
 
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
 }
