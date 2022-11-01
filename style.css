@@ -1,3 +1,8 @@
+:root {
+    --header-g1: #333333;
+    --header-g2: #111111;
+}
+
 html {
     font-size: medium;
     color: white;
@@ -13,7 +18,7 @@ body {
 }
 
 header {
-    background: rgb(25, 25, 25);
+    background: radial-gradient(var(--header-g1), var(--header-g2));
     width: 100%;
     display: flex;
     flex-direction: column;
