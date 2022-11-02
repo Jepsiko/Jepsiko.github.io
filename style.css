@@ -156,15 +156,25 @@ p {
     justify-content: center;
 }
 
+@keyframes background-pan {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 0px 200vh;
+    }
+}
+
 #help-the-gille {
+    animation: background-pan 30s linear infinite;
     background: linear-gradient(
-        135deg,
-        var(--htg-g1),
-        var(--htg-g2) 25%,
+        to bottom,
+        var(--htg-g2),
         var(--htg-g3) 50%,
-        var(--htg-g2) 75%,
-        var(--htg-g1) 100%
+        var(--htg-g2) 100%
     );
+    background-size: 200%;
 }
 
 .showcase {
@@ -182,21 +192,20 @@ p {
 .presentation iframe {
     width: 100%;
     aspect-ratio: 16/9;
+    border: 0;
 }
 
 .gallery {
     width: 100%;
-    height: 110px;
-    background: rgba(0, 0, 0, 0.2);
+    height: 90px;
+    overflow-x: auto;
 }
 
 .gallery img {
     width: 160px;
     height: 90px;
-    border: #111111 2px solid;
-    margin: 3px;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.7;
     transition: opacity 300ms, transform 300ms ease;
 }
 
