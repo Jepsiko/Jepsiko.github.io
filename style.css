@@ -34,10 +34,39 @@ header {
     background: radial-gradient(var(--header-g1), var(--header-g2));
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 5em;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+header img {
+    width: 10em;
+    filter: brightness(0) saturate(100%) invert(100%);
+    margin-right: 2em;
+    margin-top: 5em;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes slideInFromBottom {
@@ -51,12 +80,19 @@ header {
     }
 }
 
+@font-face {
+    font-family: Cocogoose;
+    src: url("Cocogoose Pro Light-trial.ttf");
+}
+
 h1 {
     color: white;
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 3rem;
+    font-family: Cocogoose, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
 
-    padding-top: 2em;
+    padding-top: 3em;
 
     animation: 1s ease-out 0s 1 slideInFromBottom;
 }
