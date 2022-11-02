@@ -39,42 +39,37 @@ header {
     padding-top: 20px;
 }
 
-@keyframes slideInFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    50% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 header img {
     width: 80px;
     filter: brightness(0) saturate(100%) invert(100%);
     margin-right: 30px;
-    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+[data-inviewport="slide-from-left"] {
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+[data-inviewport="slide-from-left"].is-inViewport {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-inviewport="slide-from-right"] {
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+[data-inviewport="slide-from-right"].is-inViewport {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @font-face {
     font-family: Cocogoose;
     src: url("Cocogoose Pro Light-trial.ttf");
-}
-
-@keyframes slideInFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 h1 {
@@ -83,19 +78,20 @@ h1 {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.1em;
-
-    animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 #about-me {
     background: #FFF8EA;
+    width: 100%;
+    line-height: 0;
 }
 
 #about-me h2 {
-    padding: 20px 20px 10px;
+    padding: 30px 20px 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 30px;
+    line-height: 25px;
     text-transform: uppercase;
     color: #594545;
 }
@@ -104,9 +100,13 @@ h1 {
     padding: 0 20px 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
     color: #815B5B;
+}
+
+#about-me br {
+    margin-bottom: 20px;
 }
 
 #about-me img {
@@ -150,7 +150,6 @@ img {
 .showcase {
     padding-top: 5em;
     width: 100%;
-    box-shadow: 0px 30px 30px -30px #222222 inset;
 }
 
 .presentation h3 {
