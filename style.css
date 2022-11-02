@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+img {
+    object-fit: cover;
+}
+
 html::-webkit-scrollbar {
     display: none;
 }
@@ -55,7 +59,33 @@ h1 {
     font-family: Cocogoose, sans-serif;
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 3px;
+}
+
+h2 {
+    padding: 30px 20px 20px;
+    font-family: Cocogoose, sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 25px;
+    font-variant: small-caps;
+    color: #594545;
+}
+
+h3 {
+    padding: 30px 20px 20px;
+    font-family: Cocogoose, sans-serif;
+    font-size: 35px;
+    font-variant: small-caps;
+    line-height: 25px;
+}
+
+p {
+    padding: 0 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 [data-inviewport="fade-in"] {
@@ -95,22 +125,7 @@ h1 {
     line-height: 0;
 }
 
-#about-me h2 {
-    padding: 30px 20px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
-    line-height: 25px;
-    text-transform: uppercase;
-    color: #594545;
-}
-
 #about-me p {
-    padding: 0 20px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    font-size: 18px;
-    line-height: 25px;
     color: #815B5B;
 }
 
@@ -141,10 +156,6 @@ h1 {
     justify-content: center;
 }
 
-img {
-    object-fit: cover;
-}
-
 #help-the-gille {
     background: linear-gradient(
         135deg,
@@ -157,53 +168,31 @@ img {
 }
 
 .showcase {
-    padding-top: 5em;
     width: 100%;
 }
 
 .presentation h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
-    font-size: 2rem;
     color: var(--htg-highlight-color);
 }
 
 .presentation p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    color: #E0E0E0;
 }
 
-.presentation div {
-    width: 15em;
-    height: 30em;
-    margin-right: 5em;
-}
-
-.presentation img {
-    width: 20em;
-    height: 30em;
-    margin-right: 5em;
-    cursor: pointer;
-
-    border: var(--htg-highlight-color) 3px solid;
-    transition: transform 500ms ease;
-}
-
-.presentation img:hover {
-    transform: scale(1.05, 1.05);
+.presentation iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .gallery {
-    margin-top: 2em;
-    
     width: 100%;
-    height: 8em;
+    height: 110px;
     background: rgba(0, 0, 0, 0.2);
 }
 
 .gallery img {
-    width: 12em;
-    height: 6.75em;
+    width: 160px;
+    height: 90px;
     border: #111111 2px solid;
     margin: 3px;
     cursor: pointer;
