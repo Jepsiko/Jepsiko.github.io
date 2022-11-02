@@ -45,6 +45,28 @@ header img {
     margin-right: 30px;
 }
 
+@font-face {
+    font-family: Cocogoose;
+    src: url("Cocogoose Pro Light-trial.ttf");
+}
+
+h1 {
+    color: white;
+    font-family: Cocogoose, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+[data-inviewport="fade-in"] {
+    transition: 3s;
+    opacity: 0;
+}
+
+[data-inviewport="fade-in"].is-inViewport {
+    opacity: 1;
+}
+
 [data-inviewport="slide-from-left"] {
     transition: 1s;
     opacity: 0;
@@ -65,19 +87,6 @@ header img {
 [data-inviewport="slide-from-right"].is-inViewport {
     opacity: 1;
     transform: translateX(0);
-}
-
-@font-face {
-    font-family: Cocogoose;
-    src: url("Cocogoose Pro Light-trial.ttf");
-}
-
-h1 {
-    color: white;
-    font-family: Cocogoose, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
 }
 
 #about-me {
