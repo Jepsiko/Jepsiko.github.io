@@ -8,8 +8,9 @@
     --htg-highlight-color: #FFF8EA;
 }
 
-html {
-    font-size: medium;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html::-webkit-scrollbar {
@@ -26,8 +27,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
 
 header {
@@ -36,7 +35,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5em;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 @keyframes slideInFromLeft {
@@ -55,29 +55,10 @@ header {
 }
 
 header img {
-    width: 10em;
+    width: 80px;
     filter: brightness(0) saturate(100%) invert(100%);
-    margin-right: 2em;
-    margin-top: 5em;
+    margin-right: 30px;
     animation: 2s ease-out 0s 1 slideInFromLeft;
-}
-
-header div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes slideInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 @font-face {
@@ -85,27 +66,25 @@ header div {
     src: url("Cocogoose Pro Light-trial.ttf");
 }
 
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 h1 {
     color: white;
     font-family: Cocogoose, sans-serif;
-    font-size: 2.5rem;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 0.1em;
 
-    padding-top: 3em;
-
-    animation: 1s ease-out 0s 1 slideInFromBottom;
-}
-
-.subtitle {
-    color: gray;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
-    
-    position: relative;
-    top: -2em;
-
-    animation: 1s ease-out 0s 1 slideInFromBottom;
+    animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .vlayout:not(.justify-left) {
@@ -144,7 +123,6 @@ img {
 
 .showcase {
     padding-top: 5em;
-    padding-bottom: 1em;
     width: 100%;
     box-shadow: 0px 30px 30px -30px #222222 inset;
 }
