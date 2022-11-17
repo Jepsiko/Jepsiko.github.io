@@ -38,23 +38,26 @@ header {
     padding-top: 20px;
 }
 
+@keyframes slide-from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    } 
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 header img {
-    width: 80px;
+    width: 300px;
     filter: brightness(0) saturate(100%) invert(100%);
-    margin-right: 30px;
+    animation: slide-from-left 1s ease-out;
 }
 
 @font-face {
     font-family: Cocogoose;
     src: url("Cocogoose Pro Light-trial.ttf");
-}
-
-h1 {
-    color: white;
-    font-family: Cocogoose, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
 }
 
 h2 {
